@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fakestore</title>
+
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    <script src="/src/scripts/replcae.js"></script>
+
+</head>
+
+<body class="container-fluid" onload="bodyload()">
+
+    <header class="mt-2 bg-light p-2 d-flex justify-content-between">
+
+        <div class="fw-bold fs-5">Fakestore</div>
+
+        <div>
+
+            <div class="input-group">
+
+                <input type="text" placeholder="Search Fakestore.in" class="form-control" id="textSearch" onkeyup="Search()">
+
+                <button class="btn btn-warning bi bi-search"></button>
+
+                 <ol id="ol"></ol>
+
+            </div>
+
+        </div>
+
+        <div>
+
+            <button onclick="ShowCartClick()" data-bs-target="#cart" data-bs-toggle="offcanvas" class="btn btn-warning bi bi-cart4 position-relative"> <span id="lblCount" class="badge rounded bg-danger text-white rounded-circle position-absolute"></span> </button>
+
+            <div class="offcanvas offcanvas-end" id="cart">
+
+                <div class="offcanvas-header">
+
+                    <h3>Your Cart Items</h3>
+
+                    <button class="btn btn-close" data-bs-dismiss="offcanvas"></button>
+
+                </div>
+
+                <div class="offcanvas-body">
+
+                    <table class="table table-hover">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Title</th>
+
+                                <th>Preview</th>
+
+                                <th>Price</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+
+
+                        </tbody>
+
+                        <tfoot>
+
+                            <tr class="fs-5 fw-bold">
+
+                                <td colspan="2">Total Amount</td>
+
+                                <td id="lblAmount" class="fw-bold text-danger"> </td>
+
+                            </tr>
+
+                        </tfoot>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <section class="mt-3 row">
+
+        <nav class="col-2">
+
+            <div class="my-3">
+
+                <label>Select Category</label>
+
+                <div>
+
+                    <select onchange="CategoryChange()" class="form-select" id="lstCategories">
+
+                        
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+        <main class="col-10 d-flex flex-wrap overflow-auto" style="height:500px">
+
+
+
+        </main>
+
+    </section>
+
+</body>
+
+</html>
